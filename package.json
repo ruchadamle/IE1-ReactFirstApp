@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run dev --workspace react-frontend",
+    "dev": "npm run dev --workspace react-frontend",
+    "build": "npm run build --workspace react-frontend",
+    "lint": "npm run lint --workspace react-frontend",
+    "test": "echo \"No tests configured\""
   },
   "private": true,
   "author": "",
