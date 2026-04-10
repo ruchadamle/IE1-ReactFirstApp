@@ -14,5 +14,9 @@
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "packages/*"]
+    "packages/*"
+  ],
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
 }
