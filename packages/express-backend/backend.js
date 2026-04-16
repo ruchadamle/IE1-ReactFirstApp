@@ -62,6 +62,9 @@ const deleteUserById = (id) => {
     return userToDelete;
 };
 
+const generateId = () =>
+    Math.random().toString(36).substring(2, 8);
+
 app.get("/users/:id", (req, res) => {
     const id = req.params["id"];
     let result = findUserById(id);
@@ -89,8 +92,9 @@ const addUser = (user) => {
 
 app.post("/users", (req, res) => {
     const userToAdd = req.body;
+    userToAdd["id"] = generateId();
     addUser(userToAdd);
-    res.status(201).send();
+    res.status(201).send(userToAdd);
 });
 
 app.get("/users", (req, res) => {
